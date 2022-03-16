@@ -34,12 +34,13 @@ lows = []
 
 for row in csv_file:
     
+    #try and except method is to catch the exception or error if any
     try:
         current_data = datetime.strptime(row[2], '%Y-%m-%d')
         high = int(row[4])
         low = int(row[5])
         
-        
+    #this only happens or comes into play of value error take place  
     except ValueError:
         print(f'missing data for {current_data}')
         

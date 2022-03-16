@@ -42,6 +42,7 @@ plt.plot(dates, highs, c ='red')
 plt.plot(dates, lows, c ='blue')
 
 plt.fill_between(dates, highs, lows, facecolor = 'blue', alpha = 0.1)
+#to fill in the graph we need to give x-axis and y-axis location (here we have 2 y axis locations) 
 #alpha value is always between 0-1
 
 
@@ -57,14 +58,19 @@ fig.autofmt_xdate()
 
 #plt.show()
 
-plt.subplot(2,1,1)
+
+'''how to create subplots (important for HW)'''
+#we have to give 3 arguments
+#i.e. number of rows(2), column(1) and which subplot we want to create first i.e. index (1)of the plot
+plt.subplot(2,1,1) 
 plt.plot(dates, highs, c='red')
 plt.title ('Highs')
 
 plt.subplot(2,1,2)
 plt.plot(dates, lows, c='blue')
-plt.title ('Blues')
+plt.title ('Lows')
 
+#suptitle 
 plt.suptitle("High and lows of Sitka, Alaskas 2018")
 
 plt.show()
